@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-size: 35px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #ff0000; /* Red */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdc7c7; /* Light pinkish background */
+}
+
+.shopping-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff; /* White background for the card container */
+  border-radius: 20px;
+  padding: 3%;
+  margin: 50px 0;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fb4444; /* Soft red border */
+}
+
+.total-price span {
+  font-size: 30px;
+}
+
+.total {
+  font-weight: bold;
+  color: #ff0000; /* Red for total price */
+}
+
+.list-products {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  width: 18rem;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ff8686; /* Soft pink border */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+.card-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.fa-trash-alt {
+  color: #fb4444; /* Soft red color */
+}
+
+.fa-heart {
+  cursor: pointer;
+  color: #ffd700; /* Golden heart color */
+  transition: color 0.3s ease;
+}
+
+.fa-heart.liked {
+  color: #ff6347; /* Tomato red when liked */
+}
+
+.fa-trash-alt {
+  cursor: pointer;
+  color: #fb4444;
+  transition: color 0.3s ease;
+}
+
+.fa-trash-alt:hover {
+  color: #ff0000; /* Red on hover */
+}
+
+/* Add custom styles for quantity buttons */
+.card-body i.fa-plus-circle,
+.card-body i.fa-minus-circle {
+  font-size: 30px;
+  padding: 5px;
+  background-color: #ff8686; /* Light red background for buttons */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.card-body i.fa-plus-circle:hover,
+.card-body i.fa-minus-circle:hover {
+  background-color: #fb4444; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .shopping-card-container {
+    width: 90%;
+  }
+}
